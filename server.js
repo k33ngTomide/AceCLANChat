@@ -24,7 +24,7 @@ app.use(cors({
 mongoose.set('strictQuery', true);
 
 
-mongoose.connect(`mongodb+srv://${process.env.PASSWORD}:${process.env.PASSWORD}@ace-clan.9jkhums.mongodb.net/?retryWrites=true&w=majority`, {
+mongoose.connect(`mongodb+srv://${process.env.PASSWORD}:${process.env.PASSWORD}@ace-clan.9jkhums.mongodb.net/Ace-clanDb?retryWrites=true&w=majority`, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 }, () => {
