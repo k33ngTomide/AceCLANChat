@@ -16,7 +16,7 @@ const io = socketIo(server, {
 
 app.use(cors({
   origin: 'https://ace-clan.vercel.app/', 
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  methods: ['GET','HEAD','PUT','PATCH','POST','DELETE'],
   credentials: true,            
 }));
 
