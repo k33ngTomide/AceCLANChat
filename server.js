@@ -9,13 +9,13 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIo(server, {
   cors: {
-    origin: 'http://localhost:3000',
+    origin: 'https://ace-clan.vercel.app/',
     methods: ['GET', 'POST'],
   },
 });
 
 app.use(cors({
-  origin: 'http://localhost:3000/', 
+  origin: 'https://ace-clan.vercel.app/', 
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true,            
 }));
@@ -23,7 +23,7 @@ app.use(cors({
 mongoose.set('strictQuery', true);
 
 
-mongoose.connect('mongodb://localhost:27017/chat', {
+mongoose.connect(`mongodb+srv://${process.env.PASSWORD}:${process.env.PASSWORD}@ace-clan.9jkhums.mongodb.net/?retryWrites=true&w=majority`, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 }, () => {
